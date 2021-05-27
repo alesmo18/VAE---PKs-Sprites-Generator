@@ -238,6 +238,9 @@ plot_images(10,10,predictions, "RANDOM SPRITES")
 ```
 ![New Sprites](https://i.ibb.co/zr8nZDX/new-sprites.png)
 
-## Future features
+## Conclusion and future features
 
-I'll keep to slighty modify the base model, next goal is use the [Keras Tuner](https://www.tensorflow.org/tutorials/keras/keras_tuner) to find the best params for the model
+You can find the notebook python file uploaded, be sure to change paths before running, you can also find some plots results based on variations of base model.
+In these tests I tryed different latent dimensions, batchs size, kernels size, where "w png hq4ch" stand for rgba imgs png format with 4 channels.
+ 
+I'll keep to slighty modify the base model, next phase is to use the [Keras Tuner](https://www.tensorflow.org/tutorials/keras/keras_tuner) to find the best params for the model
