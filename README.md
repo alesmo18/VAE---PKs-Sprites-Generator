@@ -97,7 +97,7 @@ Here's a simple print of a rgba sprite (using PIL lib)
 > Be sure to change the variable of paths before use and check input shape of model
 
 
-## Building the Convlutional Autoencoder Model
+## Building the Convolutional Autoencoder Model
 
 I've started checking on web a base model that would fit for 64x64 imgs and I slighty modified it.
 To build the model I've used the tensorflow [API Keras Model Subclassing](https://www.tensorflow.org/guide/keras/custom_layers_and_models)
