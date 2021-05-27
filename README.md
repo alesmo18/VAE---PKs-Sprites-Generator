@@ -101,6 +101,7 @@ Here's a simple print of a rgba sprite (using PIL lib)
 
 I've started checking on web a base model that would fit for 64x64 imgs and I slighty modified it.
 To build the model I've used the tensorflow [API Keras Model Subclassing](https://www.tensorflow.org/guide/keras/custom_layers_and_models)
+The model is made of two Sequential part: encoder and decoder, each with 5 conv2d layers, 5 BatchNormalization layers, a Dense layer as encoder's output and a Dense as decoder's input. Input shape is 64x64x4, be sure to change it as 64x64x1 if you want to use grayscale sprites.
 
 Base model code:
 ```
@@ -143,19 +144,19 @@ class CVAE(tf.keras.Model):
             tf.keras.layers.BatchNormalization(),
             tf.keras.layers.Reshape(target_shape=(4, 4, latent_dims)),
             tf.keras.layers.Conv2DTranspose(
-                filters=256, kernel_size=5, strides=2, padding='same',
+                filters=256, kernel_size=5, strides=(2, 2), padding='same',
                 activation='relu'),
             tf.keras.layers.BatchNormalization(),
             tf.keras.layers.Conv2DTranspose(
-                filters=128, kernel_size=5, strides=2, padding='same',
+                filters=128, kernel_size=5, strides=(2, 2), padding='same',
                 activation='relu'),
             tf.keras.layers.BatchNormalization(),
             tf.keras.layers.Conv2DTranspose(
-                filters=64, kernel_size=5, strides=2, padding='same',
+                filters=64, kernel_size=5, strides=(2, 2), padding='same',
                 activation='relu'),
             tf.keras.layers.BatchNormalization(),
             tf.keras.layers.Conv2DTranspose(
-                filters=32, kernel_size=5, strides=2, padding='same',
+                filters=32, kernel_size=5, strides=(2, 2), padding='same',
                 activation='relu'),
             tf.keras.layers.BatchNormalization(),
             tf.keras.layers.Conv2DTranspose(
