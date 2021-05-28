@@ -243,5 +243,10 @@ plot_images(10,10,predictions, "RANDOM SPRITES")
 
 You can find the notebook python file uploaded, be sure to change paths before running, you can also find some plots results based on variations of base model.
 In these tests I tryed different latent dimensions, batchs size, kernels size, where "w png hq4ch" stand for rgba imgs png format with 4 channels.
+Here are some examples of sprites obtained:
+
+<img src="https://i.ibb.co/jv99h1J/base-model-reconstruction.png" width="400" height="150">
+
+![Modded model](https://i.ibb.co/YtsGL87/mode-reconstructed-compare.png)
  
 I'll keep to slighty modify the base model, next phase is to use the [Keras Tuner](https://www.tensorflow.org/tutorials/keras/keras_tuner) to find the best params for the model
