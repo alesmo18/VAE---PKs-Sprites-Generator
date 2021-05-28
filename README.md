@@ -34,7 +34,7 @@ The main goal is to get a good accuracy using an input size of (64x64x4) so RGBA
 If you want to generate a grayscale sprites dataset just use the code:
 
 ```
-directory = r'ORGINAL DATASET PATH'
+directory = r'ORIGINAL DATASET PATH'
 out_dir = r'PATH WHERE TO SAVE NEWs GRAYSCALE SPRITES'
 os.chdir(directory)
 c=1
